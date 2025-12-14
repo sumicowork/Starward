@@ -65,6 +65,10 @@ public sealed partial class TrailblazeCalendarPage : PageBase
         CurrentSeries = null;
         SelectSeries = null;
         DayDataList = null!;
+        AllDetailItems = null!;
+        FilteredDetailItems = null!;
+        ActionCategories = null!;
+        ActionNames = null!;
     }
 
 
@@ -91,6 +95,34 @@ public sealed partial class TrailblazeCalendarPage : PageBase
 
     [ObservableProperty]
     private List<CalendarDayData> dayDataList;
+
+
+    [ObservableProperty]
+    private List<TrailblazeCalendarDetailItem> allDetailItems;
+
+
+    [ObservableProperty]
+    private List<TrailblazeCalendarDetailItem> filteredDetailItems;
+
+
+    [ObservableProperty]
+    private List<string> actionCategories;
+
+
+    [ObservableProperty]
+    private string? selectedActionCategory;
+
+
+    [ObservableProperty]
+    private List<string> actionNames;
+
+
+    [ObservableProperty]
+    private string? selectedActionName;
+
+
+    [ObservableProperty]
+    private int selectedDetailType = 1; // 1=Stellar Jade, 2=Pass
 
 
 
@@ -240,6 +272,39 @@ public sealed partial class TrailblazeCalendarPage : PageBase
         }
     }
 
+
+
+    [RelayCommand]
+    private void NavigateToJadeDetailPage()
+    {
+        try
+        {
+            if (gameRole != null && Frame != null)
+            {
+                Frame.Navigate(typeof(TrailblazeCalendarDetailPage), (gameRole, 1)); // 1 = Stellar Jade
+            }
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Navigate to jade detail page");
+        }
+    }
+
+    [RelayCommand]
+    private void NavigateToPassDetailPage()
+    {
+        try
+        {
+            if (gameRole != null && Frame != null)
+            {
+                Frame.Navigate(typeof(TrailblazeCalendarDetailPage), (gameRole, 2)); // 2 = Pass
+            }
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Navigate to pass detail page");
+        }
+    }
 
 
     private void RefreshDailyDataPlot(TrailblazeCalendarMonthData data)

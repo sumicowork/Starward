@@ -518,6 +518,9 @@
   <data name="Common_Refresh" xml:space="preserve">
     <value>刷新</value>
   </data>
+  <data name="Common_GoBack" xml:space="preserve">
+    <value>返回</value>
+  </data>
   <data name="LauncherPage_ThisWeek" xml:space="preserve">
     <value>本周</value>
   </data>
@@ -978,6 +981,60 @@
   </data>
   <data name="TrailblazeCalendarPage_PassAndSpecialPass" xml:space="preserve">
     <value>星轨通票 &amp; 星轨专票</value>
+  </data>
+  <data name="TrailblazeCalendarPage_DetailedTransactions" xml:space="preserve">
+    <value>详细明细</value>
+  </data>
+  <data name="TrailblazeCalendarPage_ViewDetailedTransactions" xml:space="preserve">
+    <value>查看详细明细</value>
+  </data>
+  <data name="TrailblazeCalendarPage_StellarJadeDetails" xml:space="preserve">
+    <value>星琼明细</value>
+  </data>
+  <data name="TrailblazeCalendarPage_PassDetails" xml:space="preserve">
+    <value>星轨票明细</value>
+  </data>
+  <data name="TrailblazeCalendarPage_FilterByCategory" xml:space="preserve">
+    <value>按类别筛选</value>
+  </data>
+  <data name="TrailblazeCalendarPage_AllCategories" xml:space="preserve">
+    <value>全部类别</value>
+  </data>
+  <data name="TrailblazeCalendarPage_FilterByName" xml:space="preserve">
+    <value>按名称筛选</value>
+  </data>
+  <data name="TrailblazeCalendarPage_AllNames" xml:space="preserve">
+    <value>全部名称</value>
+  </data>
+  <data name="TrailblazeCalendarPage_Time" xml:space="preserve">
+    <value>时间</value>
+  </data>
+  <data name="TrailblazeCalendarPage_Source" xml:space="preserve">
+    <value>来源</value>
+  </data>
+  <data name="TrailblazeCalendarPage_Amount" xml:space="preserve">
+    <value>数量</value>
+  </data>
+  <data name="TrailblazeCalendarPage_TotalRecords" xml:space="preserve">
+    <value>共 {0} 条记录</value>
+  </data>
+  <data name="TrailblazeCalendarPage_TotalAmount" xml:space="preserve">
+    <value>总计：</value>
+  </data>
+  <data name="TrailblazeCalendarPage_AllYears" xml:space="preserve">
+    <value>全部年份</value>
+  </data>
+  <data name="TrailblazeCalendarPage_AllMonths" xml:space="preserve">
+    <value>全部月份</value>
+  </data>
+  <data name="Common_Type" xml:space="preserve">
+    <value>类型</value>
+  </data>
+  <data name="Common_Year" xml:space="preserve">
+    <value>年份</value>
+  </data>
+  <data name="Common_Month" xml:space="preserve">
+    <value>月份</value>
   </data>
   <data name="TravelersDiaryPage_Primogems" xml:space="preserve">
     <value>原石</value>

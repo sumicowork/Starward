@@ -92,6 +92,30 @@
                     <MenuFlyout x:Name="MenuFlyout_GetDetails" Placement="RightEdgeAlignedTop" />
                 </Button.Flyout>
             </Button>
+            <Button Height="36"
+                    BorderThickness="0"
+                    Command="{x:Bind NavigateToJadeDetailPageCommand}"
+                    CornerRadius="0,18,18,0"
+                    Style="{ThemeResource AccentButtonStyle}">
+                <StackPanel Margin="4,0,4,0"
+                            Orientation="Horizontal"
+                            Spacing="8">
+                    <FontIcon FontSize="16" Glyph="&#xE8A7;" />
+                    <TextBlock Text="{x:Bind lang:Lang.TrailblazeCalendarPage_StellarJadeDetails}" />
+                </StackPanel>
+            </Button>
+            <Button Height="36"
+                    BorderThickness="0"
+                    Command="{x:Bind NavigateToPassDetailPageCommand}"
+                    CornerRadius="0,18,18,0"
+                    Style="{ThemeResource AccentButtonStyle}">
+                <StackPanel Margin="4,0,4,0"
+                            Orientation="Horizontal"
+                            Spacing="8">
+                    <FontIcon FontSize="16" Glyph="&#xE8A7;" />
+                    <TextBlock Text="{x:Bind lang:Lang.TrailblazeCalendarPage_PassDetails}" />
+                </StackPanel>
+            </Button>
         </StackPanel>
 
 
@@ -434,6 +458,7 @@
                         </ItemsRepeater.ItemTemplate>
                     </ItemsRepeater>
                 </Border>
+
 
 
             </StackPanel>
