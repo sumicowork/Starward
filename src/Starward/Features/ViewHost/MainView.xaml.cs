@@ -245,6 +245,9 @@ public sealed partial class MainView : UserControl
     {
         try
         {
+            // 已禁用自动更新检查 - 此为分支版本
+            return;
+            
 #if CI || DEBUG
             return;
 #endif

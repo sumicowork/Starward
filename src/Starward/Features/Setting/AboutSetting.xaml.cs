@@ -51,7 +51,7 @@ public sealed partial class AboutSetting : PageBase
 
 
     /// <summary>
-    /// 检查更新
+    /// 检查更新 - 已禁用（分支版本）
     /// </summary>
     /// <returns></returns>
     [RelayCommand]
@@ -60,16 +60,19 @@ public sealed partial class AboutSetting : PageBase
         try
         {
             IsUpdated = false;
-            UpdateErrorText = null;
-            var release = await AppConfig.GetService<UpdateService>().CheckUpdateAsync(true);
-            if (release != null)
-            {
-                new UpdateWindow { NewVersion = release }.Activate();
-            }
-            else
-            {
-                IsUpdated = true;
-            }
+            UpdateErrorText = "此为分支版本，已禁用自动更新功能";
+            await Task.CompletedTask;
+            
+            // 原始更新检查代码已禁用
+            //var release = await AppConfig.GetService<UpdateService>().CheckUpdateAsync(true);
+            //if (release != null)
+            //{
+            //    new UpdateWindow { NewVersion = release }.Activate();
+            //}
+            //else
+            //{
+            //    IsUpdated = true;
+            //}
         }
         catch (Exception ex)
         {

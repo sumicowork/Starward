@@ -20,7 +20,7 @@
                         RightClickCommand="{x:Bind ShowCommand}"
                         ToolTipText="Starward" />
 
-        <StackPanel Padding="8">
+        <StackPanel x:Name="MenuStackPanel" Padding="8">
 
             <Button Height="36"
                     HorizontalAlignment="Stretch"
@@ -34,6 +34,30 @@
                     <TextBlock VerticalAlignment="Center" Text="{x:Bind lang:Lang.MainPage_Launcer}" />
                 </StackPanel>
             </Button>
+
+            <!--Launch Game Items-->
+            <ItemsControl ItemsSource="{x:Bind InstalledGames}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal" Spacing="4" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate x:DataType="local:GameLaunchItem">
+                        <Button Width="48"
+                                Height="48"
+                                Padding="4"
+                                Command="{x:Bind LaunchCommand}"
+                                ToolTipService.ToolTip="{x:Bind DisplayName}"
+                                Style="{ThemeResource DateTimePickerFlyoutButtonStyle}">
+                            <Border CornerRadius="6">
+                                <Image Source="{x:Bind GameIcon}" Stretch="UniformToFill" />
+                            </Border>
+                        </Button>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+
             <Button Height="36"
                     HorizontalAlignment="Stretch"
                     HorizontalContentAlignment="Left"

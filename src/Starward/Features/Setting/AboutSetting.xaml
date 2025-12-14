@@ -62,16 +62,17 @@
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
-                <!--  检查更新  -->
+                <!--  检查更新（已禁用 - 分支版本）  -->
                 <Button Height="40"
                         Padding="12,0,16,0"
                         BorderThickness="0"
                         Command="{x:Bind CheckUpdateCommand}"
                         CornerRadius="4,20,20,4"
-                        Style="{ThemeResource AccentButtonStyle}">
+                        IsEnabled="False"
+                        ToolTipService.ToolTip="此为分支版本，已禁用自动更新">
                     <StackPanel Orientation="Horizontal" Spacing="8">
                         <FontIcon Glyph="&#xE752;" />
-                        <TextBlock Text="{x:Bind lang:Lang.SettingPage_CheckForUpdate}" />
+                        <TextBlock Text="检查更新（已禁用）" />
                     </StackPanel>
                 </Button>
                 <FontIcon Grid.Column="1"
